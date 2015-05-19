@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.appextensionbase</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.xpcservicebase</string>
+        <string>com.apple.dt.unit.languageChoice</string>
+    </array>
+    <key>TargetOnly</key>
+    <true/>
+    <key>AssociatedTargetSpecification</key>
+    <dict>
+        <key>PopUpTitle</key>
+        <string>Embed in Application:</string>
+        <key>PopUpDescription</key>
+        <string>The application target that will host this new extension. The application will be set up to embed the new extension.</string>
+        <key>AllowableProductTypes</key>
+        <array>
+            <string>com.apple.product-type.application</string>
+        </array>
+        <key>AssociatedTargetIsDependent</key>
+        <true/>
+        <key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+        <true/>
+    </dict>
+    <key>OptionConstraints</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>bundleIdentifierPrefix</string>
+            <key>ConstraintType</key>
+            <string>RequirementIfAssociatedTarget</string>
+            <key>Value</key>
+            <string>___ASSOCIATEDTARGET_bundleIdentifier___</string>
+        </dict>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.app-extension</string>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <!-- No pch files
+        <string>Prefix.pch:objC:importCocoa</string>
+         -->
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <!-- App extensions by default should not need the XPCService plist entry that they inherit from their base template -->
+        <key>Info.plist:XPCService</key>
+        <string></string>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.genericCPPPlugIn</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.systemPlugInBase</string>
+    </array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template builds a generic C++ template that exposes a C interface, uses the static C++ standard library, and Dwarf for debugging.</string>
+    <key>SortOrder</key>
+    <integer>100</integer>
+	<key>Project</key>
+	<dict>
+		<key>BasedOn</key>
+		<dict>
+			<key>Debug</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+			<key>Release</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+		</dict>
+	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.cocoaCPPPlugInTarget</string>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Headers</string>
+				</dict>
+			</array>
+			<key>BasedOn</key>
+			<dict>
+				<key>Debug</key>
+				<string>___PACKAGENAMEASIDENTIFIER___Target.xcconfig</string>
+				<key>Release</key>
+				<string>___PACKAGENAMEASIDENTIFIER___Target.xcconfig</string>
+			</dict>
+			<key>Frameworks</key>
+			<array>
+				<string>CoreFoundation</string>
+			</array>
+		</dict>
+	</array>
+	<key>Nodes</key>
+	<array>
+		<string>Info.plist:plugIn</string>
+		<string>Info.plist:NSHumanReadableCopyright</string>
+		<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+		<string>___PACKAGENAMEASIDENTIFIER___Target.xcconfig</string>
+		<string>___PACKAGENAMEASIDENTIFIER___.h</string>
+		<string>___PACKAGENAMEASIDENTIFIER___Priv.h</string>
+		<string>___PACKAGENAMEASIDENTIFIER___.cp</string>
+        <!-- No pch files
+        <string>Prefix.pch</string>
+         -->
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>Info.plist:plugIn</key>
+		<string>&lt;key&gt;CFBundlePackageType&lt;/key&gt;
+&lt;string&gt;BNDL&lt;/string&gt;
+&lt;key&gt;CSResourcesFileMapped&lt;/key&gt;
+&lt;string&gt;yes&lt;/string&gt;
+</string>
+		<key>___PACKAGENAMEASIDENTIFIER___.h</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___.h</string>
+			<key>TargetIndices</key>
+			<array>
+				<integer>0</integer>
+			</array>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___.cp</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___.cp</string>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___Priv.h</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Priv.h</string>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Proj.xcconfig</string>
+		</dict>
+		<key>___PACKAGENAMEASIDENTIFIER___Target.xcconfig</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAMEASIDENTIFIER___Target.xcconfig</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

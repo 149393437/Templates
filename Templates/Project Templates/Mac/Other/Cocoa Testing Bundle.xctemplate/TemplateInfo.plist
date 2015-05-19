@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.cocoaUnitTestBundle</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.osxUnitTestBundleBase</string>
+    </array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This target builds a unit test bundle that uses Cocoa APIs and the XCTest framework.</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+    <key>Targets</key>
+    <array>
+        <dict>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.cocoaUnitTestBundleTarget</string>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Targets</key>
+                    <array>
+                        <dict>
+                            <key>SharedSettings</key>
+                            <dict>
+                                <!-- No pch files
+                                <key>GCC_PREFIX_HEADER</key>
+                                <string>___PACKAGENAME___/Prefix.pch</string>
+                                <key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+                                <string>YES</string>
+                                 -->
+                            </dict>
+                        </dict>
+                    </array>
+                    <key>Nodes</key>
+                    <array>
+                        <!-- No pch files
+                        <string>Prefix.pch:objC:importCocoa</string>
+                         -->
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
